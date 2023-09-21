@@ -101,3 +101,6 @@ button:hover {
     grid-template-columns: 1fr; /* Stack columns on smaller screens */
   }
 }
+body {
+  background-color: transparent; /* or any color you prefer */
+}
