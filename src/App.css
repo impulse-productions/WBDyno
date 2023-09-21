@@ -1,0 +1,103 @@
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0; /* Remove default body margin */
+}
+
+.container {
+  display: flex;
+  flex-direction: column; /* Change back to column to stack children vertically */
+  align-items: center;
+  min-height: 100vh;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.form-container,
+.results-container {
+  margin-top: 0; /* Remove the top margin */
+  width: 45%; /* Adjust the width to less than 50% to leave space for the form container */
+  display: flex;
+  flex-direction: column; /* Stack the results vertically */
+  gap: 1rem;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+  width: 45%; /* Adjust the width to less than 50% to leave space for the results container */
+  margin-right: 1rem; /* Add some margin to separate from the results container */
+}
+
+/* Add a media query for smaller screens */
+@media (max-width: 48rem) {
+  .form-container {
+    max-width: 100%; /* Full width on smaller screens */
+  }
+}
+
+h1 {
+  text-align: center;
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+  font-size: 1.75rem;
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 1rem;
+  width: 100%; /* Ensure it spans the full width */
+  box-sizing: border-box;
+}
+
+h2 {
+  font-size: 1rem; /* Use relative unit */
+  margin-bottom: 1rem; /* Use relative unit */
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem; /* Use relative unit */
+}
+
+input[type="number"] {
+  width: 100%;
+  padding: 0.625rem; /* Use relative unit */
+  margin-bottom: 1rem; /* Use relative unit */
+  border: 1px solid #ccc;
+  border-radius: 0.3125rem; /* Use relative unit */
+}
+
+button {
+  background-color: #0026A0;
+  color: #fff;
+  padding: 0.625rem 1.25rem; /* Use relative unit */
+  border: none;
+  border-radius: 0.3125rem; /* Use relative unit */
+  cursor: pointer;
+  font-size: 1rem; /* Use relative unit */
+}
+
+button:hover {
+  background-color: #555;
+}
+
+.results-box {
+  padding: 1rem; /* Use relative unit */
+  background-color: #fff;
+  border-radius: 0.5rem; /* Use relative unit */
+  box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+/* Add media query to stack results on smaller screens */
+@media (max-width: 768px) {
+  .results-container {
+    grid-template-columns: 1fr; /* Stack columns on smaller screens */
+  }
+}
