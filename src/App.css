@@ -101,6 +101,8 @@ button:hover {
     grid-template-columns: 1fr; /* Stack columns on smaller screens */
   }
 }
-body {
-  background-color: transparent; /* or any color you prefer */
+html, body {
+  background-color: transparent; /* or any other color you prefer */
+  margin: 0;
+  padding: 0;
 }
